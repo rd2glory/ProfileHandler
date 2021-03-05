@@ -1,0 +1,19 @@
+local Settings = {
+	timeUntilSessionsIsDead = 3 * 60;
+	maxBackups = 30;
+	debugEnabled = true;
+	updateCooldown = 6;
+	autoSaveInterval = 30;
+	
+	defaultFailFunction = function(error)
+		warn("An error occurred: "..(error or "nil"))
+	end;
+	
+	defaultData = {
+		data = nil;
+		locked = false;
+		time = 0;
+	};
+}
+
+return Settings
