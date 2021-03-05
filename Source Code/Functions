@@ -1,0 +1,31 @@
+local DSS = game:GetService("DataStoreService")
+
+local Settings = require(script.Parent.Settings)
+
+local defaultData = Settings.defaultData
+local debugEnabled = Settings.debugEnabled
+
+local Functions = {}
+
+function Functions.getDataFromVersion(info,dataStore)
+	local wasSuccess,data = pcall(function()
+		return dataStore:GetAsync(info.value)
+	end)
+	return wasSuccess,data
+end
+
+function Functions.format(value,sessionLock)
+	local formattedValue = defaultData
+	formattedValue.time = os.time()
+	formattedValue.locked = sessionLock
+	formattedValue.data = value
+	return formattedValue
+end
+
+function Functions.log(message)
+	if debugEnabled then
+		print(message)
+	end
+end
+
+return Functions
