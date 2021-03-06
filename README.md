@@ -6,7 +6,7 @@ ProfileHandler is a data module developed by iamtryingtofindname, which makes us
 You can download the module off of roblox [here](https://www.roblox.com/library/6478371036/ProfileHandler).
 
 ## DevForum Post
-You can view the original developer forum post [here]() in case you may have a question.
+You can view the original developer forum post [here](https://devforum.roblox.com/t/--/1087132) in case you may have a question.
 
 ## Documentation
 
